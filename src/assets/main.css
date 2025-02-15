@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+html {
+  @apply bg-gray-100;
+}
+
+.btn-primary {
+  @apply px-5 py-1 bg-violet-500 text-white font-mono rounded-sm hover:bg-violet-700 hover:scale-105 transition-all;
+}
+.btn-primary:disabled {
+  @apply bg-violet-300 cursor-not-allowed;
+}
+
+.btn-danger {
+  @apply px-5 py-1 bg-red-500 text-white font-mono rounded-sm hover:bg-red-700 hover:scale-105 transition-all;
+}
+
+.btn-secondary {
+  @apply px-5 py-1 bg-gray-300 text-gray-800 font-mono rounded-sm hover:bg-gray-500 hover:scale-105 hover:text-white transition-all;
+}
+.bg-black-rgba {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera */
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
